@@ -1,0 +1,57 @@
+.speaker-card {
+    position: relative;
+    background-image: $red-gradient;
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    z-index: 100;
+    overflow-y: visible;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    .card-content {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .photo-container {
+        margin-bottom: 50px;
+
+        img {
+          $size: 140px;
+          border-radius: 50%;
+          width: $size;
+          height: $size;
+        }
+      }
+
+        .info-container {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+          padding: 0 20px;
+
+          h3 {
+            color: white;
+            font-size: 35px;
+            font-variation-settings: $font-weight-900
+          }
+
+          p {
+            font-size: 20px;
+            font-weight: 300;
+            font-variation-settings: $font-weight-200;
+            line-height: 25px;
+          }
+        }
+    }
+}

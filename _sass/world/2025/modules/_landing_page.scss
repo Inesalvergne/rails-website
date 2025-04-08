@@ -1,15 +1,15 @@
-.landing-page {
-  min-height: 100vh;
+.banner {
+  height: calc(100vh - 100px);
   box-sizing: border-box;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 #logo-world-2025 {
-  margin: auto;
-  width: 350px;
+  width: 550px;
 
   @media only screen and (max-width: 600px) {
     width: 300px
@@ -56,4 +56,36 @@
     line-height: 18px;
     font-variation-settings: $font-weight-200;
   }
+}
+
+.landing-page .intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .illustration {
+    width: 700px;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 40%;
+    text-align: left;
+    h1 { font-size: 70px}
+    p { font-size: 30px; font-variation-settings: $font-weight-200; line-height: 45px;}
+    .bold { font-variation-settings: $font-weight-600; }
+  }
+}
+
+.landing-page .speaker-container {
+  h2 { text-align: center; font-size: 60px; }
+}
+
+.cards-container {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }

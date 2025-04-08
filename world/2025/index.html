@@ -4,32 +4,41 @@ permalink: /world/2025
 redirect_from: /world/2025/
 ---
 
+{% assign sorted_speakers = site.world_speakers | where_exp: 'item', 'item.path contains "2025"' | sort: 'last_name' %}
+
 <div class="landing-page">
-  <div>
+  <div class="banner">
     <img src="/assets/world/2025/images/RW25_logo-white-square.png" alt="Rails World 2025 Square Logo" id="logo-world-2025"/>
-    <h1 class="uppercase">September 4 & 5</h1>
-    <h2>Beurs van Berlage, Amsterdam</h2>
-
-    <a href="https://sessionize.com/rails-world-2025" target="_blank" class="button-primary large">Submit your talk</a>
-
-    <div class="line"></div>
-    <p>Tickets coming soon!</p>
-    <a href="https://rails-foundation.kit.com/sign-up" target="_blank" class="cta-with-icon">
-      <p>Join the mailing list for updates</p>
-      <img src="/assets/world/2025/icons/forward.svg" alt="forward-button" class="icon">
-    </a>
-
-    <p>Interested in sponsoring?</p>
-    <a href="https://public.3.basecamp.com/p/KZTZxpc6BVtMSH9Vv4PWAMN9" target="_blank" class="cta-with-icon">
-      <p>Find the prospectus here</p>
-      <img src="/assets/world/2025/icons/forward.svg" alt="forward-button" class="icon">
-    </a>
+    <a href="" class="button-text-gradient"><span>Get your ticket now</span></a>
   </div>
 
-  <div class="footer">
-    <p>
-      Landing page made by <a href="https://inesalvergne.com/" target="_blank">Ines Alvergne</a>,<br>
-      designed by <a href="https://www.linkedin.com/in/jomiroeming" target="_blank">Jomiro Eming.</a>
-    </p>
+  <div class="intro-container">
+    <div class="info-container">
+      <h1>Shaping the future of Ruby on Rails</h1>
+      <p>
+        <span class="bold">Rails World </span>is a two-day, two track community conference featuring <span class="bold">technical talks, demos, networking,
+        and keynotes</span> abnout the latest features and best practices in Rails development. 
+      </p>
+      <a href="" class="button-text-gradient"><span>See full programme</span></a>
+    </div>
+    <img src="/assets/world/2025/images/illustrations/conference.png" alt="attendees at the rails conf" class="illustration"/>
+  </div>
+
+  <div class="speaker-container">
+    <h2>This year's speakers</h2>
+    <div class="cards-container">
+      {% for speaker in sorted_speakers %}
+      {%
+      include world/2025/speaker-card.html
+      first_name=speaker.first_name
+      last_name=speaker.last_name
+      role=speaker.role
+      company=speaker.company
+      photo=speaker.image_path
+      path=speaker.path
+      %}
+    {% endfor %}
+    </div>
+    <a href="" class="button-text-gradient"><span>Go to speaker showcase</span></a>
   </div>
 </div>

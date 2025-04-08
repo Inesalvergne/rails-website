@@ -1,3 +1,8 @@
 $dark-purple: #3B1D62;
-$pink-purple: #880C51;
+$pink-purple: #880C51; // rename to fushia
+$red: #CB0C1C;
+$fushia-red-gradient: linear-gradient(90deg, $pink-purple, $pink-purple, $red, $red);
 $purple-pink-gradient: linear-gradient(180deg, $dark-purple, $dark-purple, $pink-purple, $pink-purple);
+$text-gradient: linear-gradient(90deg, #3B1D62 47%, #CB0C1C 100%);
+$gradient-purple-to-red: linear-gradient(90deg, #880C51 0%, #CB0C1C 100%);
+$red-gradient: linear-gradient(180deg, rgba(59, 29, 98, 0%) 40%, #CB0C1C 100%);

@@ -1,0 +1,28 @@
+<div
+    class="speaker-card"
+    role="button"
+    tabindex="0"
+    title="{{ include.first_name }} {{ include.last_name }}"
+    aria-label="Go to {{ include.first_name }} {{ include.last_name }}'s speaker page"
+    onclick="openWindow(
+        '/world/2024/speakers/{{ speakerUrl }}'
+        )
+    "
+    onkeydown="
+        handleEnterOrSpaceWindowOpen(
+            event,
+            '/world/2024/speakers/{{ speakerUrl }}'
+        )
+    "
+>
+    <div class="card-content">
+        <div class="photo-container">
+          <img src="{{ include.photo }}" alt="{{ include.first_name }} {{ include.last_name }}'s photo" loading="lazy">
+        </div>
+
+        <div class="info-container">
+          <h3>{{ include.first_name }} {{ include.last_name }}</h3>
+          <p>{{ include.role }}{% if include.company and include.company != "false" %}, {{ include.company }}{% endif %}</p>
+        </div>
+    </div>
+</div>
