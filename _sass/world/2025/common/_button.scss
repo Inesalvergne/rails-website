@@ -28,50 +28,13 @@
   }
 }
 
-
-// .button-text-gradient {
-//   text-decoration: none;
-//   border: none;
-//   cursor: pointer;
-//   outline: none;
-//   transform: translate(0);
-//   background-image: $text-gradient;
-//   padding: 20px 40px;
-//   border-radius: 10px;
-//   position: relative;
-//   transition: background-color 0.5s ease-out, border 0.5s ease-out, color 0.5s ease-out;
-
-//   span {
-//     font-size: 30px;
-//     font-size: $xx-large;
-//     font-variation-settings: 'wght' 700, 'wdth' 100;
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     background-image: $text-gradient;
-//   }
-
-//   &:after {
-//     content: '';
-//     border-radius: 10px;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-//     z-index: -1;
-//     background: white;
-//   }
-
-//   &:hover {
-//     background-image: none;
-
-//     span {
-//       -webkit-text-fill-color: white;
-//     }
-//   }
-// }
+.button-center {
+  display: flex;
+  justify-content: center;
+}
 
 .button-text-gradient {
+  display: inline-block;
   width: fit-content;
   text-decoration: none;
   border: none;

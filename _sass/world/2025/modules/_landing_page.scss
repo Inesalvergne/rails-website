@@ -42,23 +42,8 @@
   p { font-variation-settings: $font-weight-600; }
 }
 
-.landing-page .footer {
-  flex-grow: 1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin-bottom: 20px;
-  color: white;
-
-  p, a {
-    color: white;
-    font-size: $small;
-    line-height: 18px;
-    font-variation-settings: $font-weight-200;
-  }
-}
-
 .landing-page .intro-container {
+  padding-left: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,26 +51,26 @@
   .illustration {
     width: 700px;
   }
-
-  .info-container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    width: 40%;
-    text-align: left;
-    h1 { font-size: 70px}
-    p { font-size: 30px; font-variation-settings: $font-weight-200; line-height: 45px;}
-    .bold { font-variation-settings: $font-weight-600; }
-  }
 }
 
-.landing-page .speaker-container {
-  h2 { text-align: center; font-size: 60px; }
-}
-
-.cards-container {
+.landing-page .cards-container {
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
   gap: 50px;
+}
+
+.landing-page .sponsor-intro-container {
+  height: 600px;
+  background-image: url("/assets/world/2025/images/illustrations/shape_lines.png");
+  background-repeat: no-repeat;
+
+  h2 {
+    text-align: left;
+    padding: 100px 0 0 80px;
+  }
+
+  .content-right {
+    margin-left: 50%;
+  }
 }

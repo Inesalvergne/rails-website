@@ -1,0 +1,32 @@
+.logos-grid {
+  width: 80%;
+  display: grid;
+  row-gap: 30px;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  img {
+    filter: brightness(0) invert(1);
+    width: 220px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &.platinum {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &.gold {
+    width: 90%;
+    grid-template-columns: repeat(6, 1fr);
+
+    img {
+      width: 180px;
+    }
+  }
+}

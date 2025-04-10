@@ -5,14 +5,18 @@
 
 @import 'base/reset';
 @import 'base/variables';
-
 @import 'world/2025/base/colors';
-@import 'world/2025/base/body';
 @import 'world/2025/base/typography';
+
+@import 'world/2025/base/body';
+@import 'world/2025/base/layout';
 
 @import 'world/2025/common/button';
 @import 'world/2025/common/gradient_animation';
+@import 'world/2025/common/logos_grid';
+@import 'world/2025/common/polygon_frame';
 
-@import 'world/2025/modules/header';
+@import "world/2025/modules/footer";
+@import 'world/2025/modules/navbar';
 @import 'world/2025/modules/landing_page';
 @import 'world/2025/modules/speaker_card';

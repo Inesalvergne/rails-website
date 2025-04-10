@@ -2,8 +2,9 @@ $font-weight-200: 'wght' 200, 'wdth' 100;
 $font-weight-600: 'wght' 600, 'wdth' 100;
 $font-weight-900: 'wght' 900, 'wdth' 100, 'slnt' -12;
 
-$xxx-large: 52px;
-$xx-large: 29px;
+$xxxx-large: 70px;
+$xxx-large: 60px;
+$xx-large: 30px;
 $x-large: 24px;
 $large: 20px;
 $medium: 16px;
@@ -11,7 +12,7 @@ $small: 12px;
 
 h1 {
   color: white;
-  font-size: $xxx-large;
+  font-size: $xxxx-large;
   font-variation-settings: $font-weight-900;
   letter-spacing: 1px;
   line-height: 65px;
@@ -24,20 +25,32 @@ h1 {
 
 h2 {
   color: white;
-  font-size: $xx-large;
+  font-size: $xxx-large;
   font-variation-settings: $font-weight-900;
   letter-spacing: 1px;
 
   @media only screen and (max-width: 600px) {
     font-size: $medium;
   }
+
+  &.large-title {
+    font-size: $xxxx-large;
+  }
+}
+
+h3 {
+  color: white;
+  font-size: $xx-large;
+  font-variation-settings: $font-weight-900;
+  letter-spacing: 1px;
 }
 
 p {
   color: white;
-  font-size: $large;
-  font-variation-settings: $font-weight-900;
+  font-size: $xx-large;
+  font-variation-settings: $font-weight-200;
   letter-spacing: 1px;
+  line-height: 45px;
 
   @media only screen and (max-width: 600px) {
     font-size: 18px;
@@ -45,3 +58,4 @@ p {
 }
 
 .uppercase { text-transform: uppercase; }
+.bold { font-variation-settings: $font-weight-600; }
