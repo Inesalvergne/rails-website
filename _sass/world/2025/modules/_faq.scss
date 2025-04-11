@@ -1,0 +1,60 @@
+.faq-container {
+  margin-top: 50px;
+  padding: 0 80px;
+}
+
+/* Hiding the checkboxes or radio button*/
+.faq-toggle {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.faq-row {
+  .question {
+    font-size: $xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 2px solid white;
+    color: white;
+    font-weight: normal;
+    cursor: pointer;
+    user-select: none;
+    text-transform: none;
+  }
+
+  .question::after {
+    content: url('/assets/world/2025/icons/chevron_right.svg');
+    padding: 0.51rem;
+    transform: scale(1.8);
+    text-align: center;
+    transition: all 0.35s;
+  }
+
+  .answer {
+    color: white;
+    font-size: $medium;
+    max-height: 0;
+    padding-bottom: 20px;
+    transition: all 0.35s;
+    display: none;
+  }
+}
+
+.faq-toggle:checked + .question {
+  border-top: 2px solid $pink;
+}
+
+.faq-toggle:checked + .question::after {
+  content: url('/assets/world/2025/icons//chevron_right.svg');
+  rotate: 90deg;
+  transform: scale(1.5);
+}
+
+.faq-toggle:checked ~ .answer {
+  max-height: 100vh;
+  display: block;
+  transition: all 0.35s;
+}
