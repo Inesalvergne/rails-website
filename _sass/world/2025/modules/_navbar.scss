@@ -26,7 +26,9 @@ header {
 }
 
 .nav {
-  background-color: $dark-purple;
+  &.purple-background {  background-color: $dark-purple; }
+  &.red-background { background-color: $red; }
+
   align-items: center;
   justify-content: space-between;
   height: $headerHeight;

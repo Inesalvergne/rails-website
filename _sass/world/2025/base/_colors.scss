@@ -6,9 +6,11 @@ $pink: #FF18A2;
 // Gradients
 $speaker-card-gradient: linear-gradient(180deg, rgba(59, 29, 98, 0%) 50%, $red 100%);
 $speaker-card-gradient-hover: linear-gradient(180deg, rgba(59, 29, 98, 0%) 0%, rgba(203, 12, 28, 50%) 31%, $red 100%);;
+$purple-gradient: linear-gradient(180deg, $dark-purple, $dark-purple, $pink-purple, $pink-purple);
+$red-gradient: linear-gradient(180deg, $red, $red, $dark-purple, $dark-purple);
+
 
 $fushia-red-gradient: linear-gradient(90deg, $pink-purple, $pink-purple, $red, $red);
-$purple-pink-gradient: linear-gradient(180deg, $dark-purple, $dark-purple, $pink-purple, $pink-purple);
 $text-gradient: linear-gradient(90deg, #3B1D62 47%, $red 100%);
 $gradient-purple-to-red: linear-gradient(90deg, #880C51 0%, $red 100%);
 $red-gradient-vertical: linear-gradient(0deg, $red 0%, #880C51 100%);

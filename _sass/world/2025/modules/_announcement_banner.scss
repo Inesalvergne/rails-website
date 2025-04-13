@@ -1,5 +1,7 @@
 .announcement-banner {
-  background-color: $red;
+  &.purple-background {  background-color: $dark-purple; }
+  &.red-background { background-color: $red; }
+
   width: 100%;
   display: flex;
   align-items: center;

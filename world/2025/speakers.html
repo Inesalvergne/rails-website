@@ -9,19 +9,21 @@ title: Speakers
 
 {% assign sorted_speakers = site.world_speakers | where_exp: 'item', 'item.path contains "2025"' | sort: 'last_name' %}
 
-<div class="section title-center">
+<div class="section title-center description-center">
   <h1>Say hello to our A-List Celebs!</h1>
-  <div class="speaker-cards-container">
-    {% for speaker in sorted_speakers %}
-    {%
-    include world/2025/components/speaker-card.html
-    first_name=speaker.first_name
-    last_name=speaker.last_name
-    role=speaker.role
-    company=speaker.company
-    photo=speaker.image_path
-    path=speaker.path
-    %}
-  {% endfor %}
-  </div>
+  <p> Our industry leading experts will gather in Amsterdam, to share their expertise, insights, and stories about everything revolving around the Rails community</p>
+</div>
+
+<div class="speaker-cards-container">
+  {% for speaker in sorted_speakers %}
+  {%
+  include world/2025/components/speaker-card.html
+  first_name=speaker.first_name
+  last_name=speaker.last_name
+  role=speaker.role
+  company=speaker.company
+  photo=speaker.image_path
+  path=speaker.path
+  %}
+{% endfor %}
 </div>

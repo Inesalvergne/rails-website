@@ -16,32 +16,6 @@
   }
 }
 
-.landing-page .line {
-  border: 1px solid white;
-  width: 25%;
-  margin: 30px auto;
-}
-
-.landing-page .cta-with-icon {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  .icon {
-    width: 20px;
-
-    @media only screen and (max-width: 600px) {
-      width: 15px
-    }
-  }
-
-  p { font-variation-settings: $font-weight-600; }
-}
-
 .landing-page .intro-container {
   padding-left: 80px;
   display: flex;
@@ -51,13 +25,6 @@
   .illustration {
     width: 700px;
   }
-}
-
-.speaker-cards-container {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
 }
 
 .landing-page .sponsor-intro-container {
