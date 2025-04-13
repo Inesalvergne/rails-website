@@ -5,13 +5,7 @@
     title="{{ include.first_name }} {{ include.last_name }}"
     aria-label="Go to {{ include.first_name }} {{ include.last_name }}'s speaker page"
     onclick="openWindow(
-        '/world/2024/speakers/{{ speakerUrl }}'
-        )
-    "
-    onkeydown="
-        handleEnterOrSpaceWindowOpen(
-            event,
-            '/world/2024/speakers/{{ speakerUrl }}'
+        '/world/2025/speakers/{{ speakerUrl }}'
         )
     "
 >
@@ -21,8 +15,14 @@
         </div>
 
         <div class="info-container">
-          <h3>{{ include.first_name }} {{ include.last_name }}</h3>
-          <p>{{ include.role }}{% if include.company and include.company != "false" %}, {{ include.company }}{% endif %}</p>
+          <div class="info">
+            <h3>{{ include.first_name }} {{ include.last_name }}</h3>
+          </div>
+
+          <div class="info">
+            <p>{{ include.role }}{% if include.company and include.company != "false" %},{% endif %}</p>
+            <p>{% if include.company and include.company != "false" %} {{ include.company }}{% endif %}</p>
+          </div>
         </div>
     </div>
 </div>

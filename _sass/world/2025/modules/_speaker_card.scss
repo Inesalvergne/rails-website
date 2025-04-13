@@ -1,20 +1,32 @@
 .speaker-card {
   position: relative;
-  background-image: $red-gradient;
+  overflow: hidden;
+  background-image: $speaker-card-gradient;
+  transition: background 0.6s ease-in;
   width: 350px;
   height: 500px;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
-  z-index: 100;
-  overflow-y: visible;
   cursor: pointer;
-  transition: all 0.25s ease;
 
-  .polygon-frame {
-    margin-bottom: 20px;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: $speaker-card-gradient-hover;
+    opacity: 0;
+    transition: opacity 0.6s ease-in;
+    pointer-events: none; // ensures it doesn't block clicks
+    z-index: 1;
+  }
+
+  // ensure content stays on top
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover::after {
+    opacity: 1;
   }
 }
 
@@ -24,6 +36,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 25px;
 
     .info-container {
       text-align: center;
@@ -41,10 +54,16 @@
       }
 
       p {
-        font-size: 20px;
-        font-weight: 300;
+        font-size: $medium;
         font-variation-settings: $font-weight-200;
         line-height: 25px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 60px;
       }
     }
 }
