@@ -1,3 +1,27 @@
+.faq-tabs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  margin-top: 40px;
+  padding: 0 80px;
+
+  .tab {
+    border-right: 1px solid white;
+    padding-right: 40px;
+
+    a {
+      color: white;
+      font-size: $large;
+      text-decoration: none;
+      transition: all 0.25s;
+
+      &:hover { text-decoration: underline }
+    }
+
+    &:last-child { border-right: none; }
+  }
+}
+
 .faq-container {
   margin-top: 50px;
   padding: 0 80px;
