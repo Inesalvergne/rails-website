@@ -3,7 +3,6 @@
   padding: 0 80px;
 }
 
-/* Hiding the checkboxes or radio button*/
 .faq-toggle {
   position: absolute;
   opacity: 0;
@@ -23,12 +22,12 @@
     cursor: pointer;
     user-select: none;
     text-transform: none;
+    transition: all
   }
 
   .question::after {
-    content: url('/assets/world/2025/icons/chevron_right.svg');
+    content: url('/assets/world/2025/icons/chevron.svg');
     padding: 0.51rem;
-    transform: scale(1.8);
     text-align: center;
     transition: all 0.35s;
   }
@@ -48,9 +47,8 @@
 }
 
 .faq-toggle:checked + .question::after {
-  content: url('/assets/world/2025/icons//chevron_right.svg');
+  content: url('/assets/world/2025/icons/chevron_pink.svg');
   rotate: 90deg;
-  transform: scale(1.5);
 }
 
 .faq-toggle:checked ~ .answer {

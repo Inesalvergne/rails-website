@@ -1,7 +1,16 @@
-<div class="faq-container">
+{% assign data = site.data.world['2025'].faq | where_exp: 'item', 'item.category == "Rails at Scale"' %}
+{% assign faqs = data.first %}
+
+<div class="section title-center">
+  <h2>FAQs</h2>
+</div>
+
+<div class="section faq-container">
+  {% for topic in faqs.topics %}
     <div class="faq-row">
-      <input type="checkbox" id="question-1" class="faq-toggle">
-      <label for="question-1" class="question">Une question</label>
-      <div class="answer">des réponses ! ostie.</div>
+      <input type="checkbox" id="topic-{{ forloop.index }}" class="faq-toggle">
+      <label for="topic-{{ forloop.index }}" class="question">{{ topic.question }}</label>
+      <div class="answer">{{ topic.answer }}</div>
     </div>
+  {% endfor %}
 </div>
