@@ -23,8 +23,9 @@
 }
 
 .faq-container {
-  margin-top: 50px;
+  margin: 50px auto 0 auto;
   padding: 0 80px;
+  width: 1200px;
 }
 
 .faq-toggle {
@@ -35,6 +36,7 @@
 
 .faq-row {
   .question {
+    font-variation-settings: $font-weight-600;
     font-size: $xx-large;
     display: flex;
     align-items: center;
@@ -57,12 +59,13 @@
   }
 
   .answer {
+    display: none;
     color: white;
-    font-size: $medium;
+    font-size: $large;
+    line-height: 30px;
     max-height: 0;
     padding-bottom: 20px;
     transition: all 0.35s;
-    display: none;
   }
 }
 

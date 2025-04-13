@@ -1,9 +1,12 @@
-{% assign data = site.data.world['2025'].faq | where_exp: 'item', 'item.category == "Rails at Scale"' %}
+---
+layout: world/2025/default
+permalink: /world/2025/faq/venues
+---
+
+{% assign data = site.data.world['2025'].faq | where_exp: 'item', 'item.category == "Venues & Hotels"' %}
 {% assign faqs = data.first %}
 
-<div class="section title-center">
-  <h2>FAQs</h2>
-</div>
+{% include world/2025/components/faq_tabs.html %}
 
 <div class="section faq-container">
   {% for topic in faqs.topics %}
