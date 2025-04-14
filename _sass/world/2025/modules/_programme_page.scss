@@ -1,0 +1,11 @@
+.programme-page {
+  .text-with-image-container {
+    .illustration { rotate: 180deg; width: 600px;}
+    .text-container { width: 50%; }
+  }
+}
+
+.programme-page .programme-overview {
+  display: flex;
+  gap: 40px;
+}
