@@ -1,0 +1,42 @@
+{% assign speaker_url = include.speaker.path | split: '/' | last | remove_first: '.md' %}
+{% assign session = include.session %}
+
+{% if session.time != blank and session.session_date != blank and session.location != blank %}
+{% assign hasInfo = true %}
+{% else %}
+{% assign hasInfo = false %}
+{% endif %}
+
+{% if hasInfo %}
+{% assign className = "sessionCard" %}
+{% else %}
+{% assign className = "sessionCard noInfo" %}
+{% endif %}
+
+{% assign url_segments = include.session.url | split: '/' %}
+{% assign day_segment = "" %}
+
+{% for segment in url_segments %}
+{% if segment contains "day-" %}
+{% assign day_segment = segment %}
+{% endif %}
+{% endfor %}
+
+
+<div class="session-card">
+  <div class="polygon-frame">
+    <img src="{{ include.speaker.image_path }}" alt="{{ include.speaker.first_name }}'s Profile Picture">
+  </div>
+
+  <div>
+    <div>
+    {{session.day}}/ {{session.location }} / {{session.time}}
+    </div>
+
+    <div>
+      <h4>{{ session.title }} </h4>
+      <p class="name">{{ include.speaker.first_name }} {{ include.speaker.last_name }} / {{ include.speaker.role }}{% if include.speaker.company %}, {{ include.speaker.company }} {% endif %}</p>
+      <p>{{ session.content }}</p>
+    </div>
+  </div>
+</div>

@@ -38,12 +38,13 @@ h2 {
   }
 }
 
-h3 {
+h3, h4 {
   color: white;
   font-size: $xx-large;
   font-variation-settings: $font-weight-900;
   letter-spacing: 1px;
 }
+
 
 p {
   color: white;
@@ -66,3 +67,10 @@ ul {
 .uppercase { text-transform: uppercase; }
 .bold { font-variation-settings: $font-weight-600; }
 .italic { font-style: italic; }
+
+.title-background-gradient {
+  width: fit-content;
+  background-image: $title-background-gradient;
+  padding: 20px;
+  margin: 50px 0;
+}

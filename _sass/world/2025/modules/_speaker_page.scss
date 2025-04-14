@@ -1,0 +1,41 @@
+.speaker-page {
+
+  h1 { font-size: $xxx-large; }
+  h3 { font-size: $xx-large; font-variation-settings: $font-weight-200; }
+  p { font-size: $medium; line-height: 30px; margin: 40px 0; }
+
+  .illustration-background {
+    position: absolute;
+    left: 0;
+    z-index: -100;
+    margin-top: 50px;
+
+    img { width: 600px; }
+  }
+}
+
+.speaker-page .speaker-presentation {
+  padding: 0 120px;
+  height: calc(100vh - 100px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 100px;
+
+  .polygon-frame { width: 400px; height: 450px; }
+
+  .social-links {
+    display: flex;
+    gap: 20px;
+
+    svg { font-size: 30px; fill: white; }
+  }
+
+}
+
+.speaker-page .speaker-sessions {
+  .session-card {
+
+  }
+
+}
