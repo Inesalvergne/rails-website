@@ -50,7 +50,7 @@ layout: world/2025/default
 
     <div class="sessions-container">
       {% for session in speakerSessions %}
-        {% include world/2025/components/session-card.html session=session %}
+        {% include world/2025/components/session-card.html session=session speaker=page %}
       {% endfor %}
     </div>
   </div>

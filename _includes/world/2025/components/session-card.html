@@ -29,13 +29,13 @@
   </div>
 
   <div>
-    <div>
-    {{session.day}}/ {{session.location }} / {{session.time}}
+    <div class="card-header">
+      <p class="text-pink uppercase">{{session.day}}/ {{session.location }} / {{session.time}}</p>
+      <h4>{{ session.title }}</h4>
+      <h5>{{ include.speaker.first_name }} {{ include.speaker.last_name }} | {{ include.speaker.role }}{% if include.speaker.company %}, {{ include.speaker.company }} {% endif %}</h5>
     </div>
 
-    <div>
-      <h4>{{ session.title }} </h4>
-      <p class="name">{{ include.speaker.first_name }} {{ include.speaker.last_name }} / {{ include.speaker.role }}{% if include.speaker.company %}, {{ include.speaker.company }} {% endif %}</p>
+    <div class="card-body">
       <p>{{ session.content }}</p>
     </div>
   </div>
