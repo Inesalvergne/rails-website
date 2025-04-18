@@ -1,0 +1,56 @@
+---
+layout: world/2025/default
+permalink: /world/2025/programme
+redirect_from:
+  - /world/2025/agenda
+  - /world/agenda
+  - /world/programme
+---
+
+{% assign sessions = site.world_sessions | where_exp: 'item', 'item.path contains "2025"'%}
+
+<div class="programme-page">
+  <div class="section text-with-image-container">
+    <div class="text-container">
+      <h1>Rails World 2025<br>Official Programme</h1>
+      <p>When we say there’s something for everyone... <span class="bold">we mean it</span>. Here’s the full breakdown so you can plan your Rails World 2025 experience.</p>
+
+      <div class="programme-overview">
+        <div>
+          <div class="text-background-gradient">
+            <p>DAY 1</p>
+          </div>
+          <ul>
+            <li>Registration starts 08:30</li>
+            <li>Sessions between 09:00 and 17:00</li>
+            <li>Lunch at 12:00</li>
+            <li>After-party from 18:00</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="text-background-gradient">
+            <p>DAY 2</p>
+          </div>
+          <ul>
+            <li>Registration starts 08:30</li>
+            <li>Sessions between 09:00 and 17:00</li>
+            <li>Lunch at 12:00</li>
+            <li>After-party from 18:00</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <img src="/assets/world/2025/images/illustrations/shape_lines.png" alt="shape lines" class="illustration">
+  </div>
+
+  <div class="section title-center">
+    <h2>Sessions</h2>
+      {% for session in sessions %}
+        {% include world/2025/components/session-card.html session=session speaker=session.speaker %}
+        <p>{{session.speaker}}</p>
+      {% endfor %}
+  </div>
+</div>

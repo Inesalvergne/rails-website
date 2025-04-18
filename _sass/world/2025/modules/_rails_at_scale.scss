@@ -1,0 +1,42 @@
+.rails-at-scale {
+  .title-container {
+    width: 50%;
+    margin: 120px auto 80px auto;
+
+  }
+
+  h1, h2 { text-align: center; }
+
+  h1 {
+    font-size: 90px;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 45px;
+    font-variation-settings: $font-weight-200;
+  }
+
+  p,ul {
+    font-size: $medium;
+    line-height: 30px;;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+      width: 40%;
+      padding: 0 80px;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 550px;
+      margin-bottom: 30px;
+    }
+  }
+}
