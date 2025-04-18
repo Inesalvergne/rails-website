@@ -5,11 +5,10 @@
   align-items: center;
   justify-items: center;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px;
 
   img {
     filter: brightness(0) invert(1);
-    width: 220px;
     transition: transform 0.3s ease;
 
     &:hover {
@@ -18,15 +17,36 @@
   }
 
   &.platinum {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    img {
+      width: 300px;
+    }
   }
 
   &.gold {
     width: 90%;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     img {
-      width: 180px;
+      width: 220px;
     }
+  }
+
+  &.silver {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  @include media(MobileScreens) {
+    display: flex;
+    flex-direction: column;
   }
 }
