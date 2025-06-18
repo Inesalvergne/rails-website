@@ -22,6 +22,7 @@
     padding-right: 50px;
     border-right: 1px solid white;
     font-variation-settings: $font-weight-800-basic;
+    font-size: 22px;
 
     @include media(MobileScreens) {
       width: fit-content;

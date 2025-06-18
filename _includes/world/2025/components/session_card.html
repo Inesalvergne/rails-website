@@ -18,9 +18,8 @@
 </div>
 
 <script>
-  openWindow = (url, openTab = false) =>{
-    const openType = openTab ? '_blank' : '_self';
-    window.open(url, openType);
+  openWindow = (url) =>{
+    window.open(url);
   }
 
   handleEnterOrSpaceWindowOpen = (e, url) => {

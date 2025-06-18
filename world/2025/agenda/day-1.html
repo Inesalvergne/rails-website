@@ -14,7 +14,7 @@ title: Agenda
     {% include world/2025/components/agenda_header.html %}
     {% include world/2025/components/agenda_tabs.html dayOneActive=true %}
 
-    <div class="sessions-container">
+    <div class="sessions-container" id="agenda-content">
       {% for session in sortedSessions %}
         {% assign speaker_path = session.speaker | replace: '.md', '' %}
         {% assign session_speaker = site.world_speakers | where: "path", "/_world_speakers/2025" | map: "path" %}
