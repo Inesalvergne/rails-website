@@ -1,0 +1,38 @@
+---
+layout: world/2025/default
+permalink: /world/2025/agenda
+redirect_from:
+  - /world/agenda
+  - /world/2025/agenda/
+title: Agenda
+---
+
+<div class="section mobile-fit-content">
+  <div class="agenda-header">
+    <div class="content">
+      <h1>Rails World 2025</h1>
+      <h2>Official Agenda</h2>
+      <p class="larger">
+        When we say there’s something for everyone... <span class="bold">we mean it</span>. Here’s the full breakdown so you can plan your Rails World 2025 experience.
+      </p>
+    </div>
+
+    <div class="illustration-container">
+      <img src="/assets/world/2025/images/shape.png" alt="attendees at rails world" class="illustration" width="500" />
+    </div>
+  </div>
+
+  <div class="agenda-tabs">
+    <div class="tab one {{ dayOneActive }}" role="button" tabindex="0" title="Day One"
+      aria-label="View day one agenda" onclick="openWindow('/world/2024/agenda/day-1')"
+      onkeydown="handleEnterOrSpaceWindowOpen(event, '/world/2024/agenda/day-1')">
+      <p>Day 1</p>
+    </div>
+
+    <div class="tab two {{ dayTwoActive }}" role="button" tabindex="0" title="Day Two"
+      aria-label="View day two agenda" onclick="openWindow('/world/2024/agenda/day-2')"
+      onkeydown="handleEnterOrSpaceWindowOpen(event, '/world/2024/agenda/day-2')">
+      <p>Day 2</p>
+    </div>
+  </div>
+</div>
